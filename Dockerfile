@@ -9,9 +9,6 @@ RUN curl -sL https://deb.nodesource.com/setup_5.x | bash -
 # for a JS runtime
 RUN apt-get install -y nodejs
 
-RUN npm install -g cnpm
+RUN npm install -g webpack bower
 
-RUN cnpm install -g webpack bower
-
-RUN gem sources --add https://gems.ruby-china.org/ --remove https://rubygems.org/
 RUN gem install bundler && gem update --system
